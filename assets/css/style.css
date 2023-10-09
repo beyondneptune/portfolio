@@ -195,3 +195,49 @@ body {
         display: none;
     }
 }
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .nav-elements {
+        justify-content: space-around;
+    }
+
+    .nav-elements h1 {
+        font-size: 36px;
+    }
+
+    .nav-elements a {
+        font-size: 20px;
+        margin: 20px;
+    }
+
+    .section {
+        flex-direction: column;
+    }
+
+    .section-header, .section-content {
+        margin: 15px 0;
+        padding: 20px;
+    }
+
+    .section h2 {
+        font-size: 28px;
+    }
+
+    .work img {
+        width: 85%;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #contact-me a {
+        display: block;
+        margin: 10px 0;
+        font-size: 21px;
+        text-align: center;
+    }
+
+    .section-header::before {
+        visibility: hidden;
+    }
+}
