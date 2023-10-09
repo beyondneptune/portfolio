@@ -1,7 +1,7 @@
 :root {
-    --dark-gray: #474952;
+    --dark-gray: #3b3d46;
     --white: #fff;
-    --purple: #a175c8; 
+    --purple: #9263ba; 
 }
 
 * {
@@ -42,6 +42,7 @@ body {
     cursor: pointer;
     text-transform: uppercase;
     margin: 25px;
+    border-bottom: 2px solid var(--white);
 }
 
 .content {
@@ -52,6 +53,7 @@ body {
 .left-headers, .right-content {
     flex: 1;
     margin: 40px;
+    padding: 20px;
     line-height: 2;
 }
 
@@ -61,16 +63,80 @@ body {
 }
 
 .right-content .about-me, .right-content .work, .right-content .contact-me {
-    margin-bottom: 8rem;
+    margin-bottom: 7rem;
 }
 
-.right-content img {
+.right-content .work1 {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.work1 img {
     width: 700px;
-    border: 4px solid var(--purple); 
+    border: 4px solid var(--purple);
+    display: block;
 }
 
+#hover-text {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: var(--white);
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; /*I use this ease-in-out transition to make the hover text more appealing*/
+}
+
+.work1:hover #hover-text{
+    visibility: visible;
+    opacity: 1;
+}
+
+.random img {
+    width: 40%;
+    display: inline;
+    justify-content: space-between;
+    border: 4px solid var(--purple);
+}
+
+.right-content .contact-me {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contact-me a {
+    text-decoration: none;
+    color: var(--white);
+    border-bottom: 3px solid var(--white);
+    font-size: 22px;
+}
+
+.left-headers::before {
+    content: " ";
+    position: absolute;
+    left: 26%;
+    width: 4px;
+    height: 110vh;
+    background-color: var(--purple);
+}
 
 .left-headers {
     color: var(--white);
-    font-size: 25px;
+    font-size: 22px;
+}
+
+.left-headers .about-me {
+    margin-bottom: 150%;
+}
+
+
+.left-headers .work {
+    margin-bottom: 400%;
 }
