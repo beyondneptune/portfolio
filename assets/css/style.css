@@ -41,33 +41,42 @@ body {
     font-size: 18px;
     margin-top: 10px;
     cursor: pointer;
-    text-transform: uppercase;
+    text-transform: capitalize;
     margin: 25px;
     border-bottom: 2px solid var(--white);
 }
 
-.content {
+.section {
     display: flex;
-    justify-content: space-between;
+    align-items: fle;
 }
 
-.left-headers, .right-content {
+.section-header, .section-content {
     flex: 1;
-    margin: 40px;
+    margin: 20px;
     padding: 20px;
     line-height: 2;
 }
 
-.right-content {
+.section-header {
+    margin: 0;
+    position: relative;
+}
+
+.section h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.section-content {
     font-size: 20px;
     color: var(--white);
+    flex: 3;
+    padding-left: 40px;
+
 }
 
-.right-content .about-me, .right-content .work, .right-content .contact-me {
-    margin-bottom: 7rem;
-}
-
-.right-content .work1 {
+.section-content .work1 {
     position: relative;
     display: inline-block;
     overflow: hidden;
@@ -107,48 +116,82 @@ body {
     border: 4px solid var(--purple);
 }
 
-.right-content .contact-me {
+.section-content #contact-me {
     display: flex;
     justify-content: space-evenly;
 }
 
-.contact-me a {
+#contact-me a {
     text-decoration: none;
     color: var(--white);
     border-bottom: 3px solid var(--white);
     font-size: 22px;
+    margin-right: 30px;
 }
 
-.left-headers::before {
-    content: " ";
+.section-header::before {
+    content: "";
     position: absolute;
-    left: 26%;
+    top: 0;
+    left: 80%;
     width: 4px;
-    height: 110vh;
+    height: 100%;
     background-color: var(--purple);
 }
 
-.left-headers {
+.section-header {
     color: var(--white);
     font-size: 22px;
 }
 
-.left-headers .about-me {
-    margin-bottom: 150%;
-}
+@media only screen and (max-width: 600px) {
 
+    .nav-elements {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-.left-headers .work {
-    margin-bottom: 400%;
-}
+    .nav-elements h1 {
+        margin-bottom: 5px;
+        font-size: 32px;
+    }
 
-@media (min-width: 768px) {
-    
-    .work img {
-        width: 450px;
+    .nav-elements a {
+        margin: 8px 0;
+        font-size: 16px;
+    }
+
+    .section {
         flex-direction: column;
     }
 
-    
+    .section-header, .section-content {
+        margin: 10px 0;
+        padding: 15px;
+    }
 
+    .section h2 {
+        font-size: 26px; 
+    }
+
+    .section-content {
+        padding-left: 10px;
+    }
+
+    .work1 img, .random img {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    #contact-me a {
+        display: block;
+        margin: 8px 0;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .section-header::before {
+        display: none;
+    }
 }
