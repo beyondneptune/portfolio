@@ -50,7 +50,7 @@ body {
     border-bottom: 2px solid var(--white);
 }
 
-.nav-elements img {
+.nav-elements #self {
     display: flex;
     width: 8%;
     border-radius: 50%;
@@ -185,7 +185,7 @@ body {
         font-size: 16px;
     }
 
-    .nav-elements img {
+    .nav-elements #self {
         width: 50%;
         transform: translate(40%, 5%);
     }
@@ -240,7 +240,7 @@ body {
         margin: 20px;
     }
 
-    .nav-elements img {
+    .nav-elements #self {
         width: 100%;
     }
 
