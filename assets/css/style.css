@@ -35,19 +35,26 @@ body {
     font-size: 40px;
     font-weight: 700;
     text-transform: uppercase;
-    margin-right: auto;
-    margin-top: 10px;
+    margin-right: 14%;
+    padding-top: 18px;
 }
 
 .nav-elements a {
     text-decoration: none;
     color: var(--white);
-    font-size: 18px;
-    margin-top: 10px;
+    font-size: 20px;
     cursor: pointer;
     text-transform: capitalize;
     margin: 25px;
+    padding-top: 10px;
     border-bottom: 2px solid var(--white);
+}
+
+.nav-elements img {
+    display: flex;
+    width: 8%;
+    border-radius: 50%;
+    margin-right: auto;
 }
 
 .section {
@@ -178,6 +185,11 @@ body {
         font-size: 16px;
     }
 
+    .nav-elements img {
+        width: 50%;
+        transform: translate(40%, 5%);
+    }
+
     .section {
         flex-direction: column;
     }
@@ -226,6 +238,10 @@ body {
     .nav-elements a {
         font-size: 20px;
         margin: 20px;
+    }
+
+    .nav-elements img {
+        width: 100%;
     }
 
     .section {
