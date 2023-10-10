@@ -1,3 +1,5 @@
+
+/*Setting up most common colors that are going to be used*/
 :root {
     --dark-gray: #3b3d46;
     --white: #fff;
@@ -16,6 +18,7 @@ body {
     background-color: var(--dark-gray);
 }
 
+/*This is where my name/links to different portions of the webpage are located*/
 .nav-bar {
     background-image: linear-gradient(to right,#0096FF, #0047AB);
     width: 100%;
@@ -52,6 +55,7 @@ body {
     align-items: fle;
 }
 
+/*I use the flex syntax to align both the headers and contents beside each other with some adjustments*/
 .section-header, .section-content {
     flex: 1;
     margin: 20px;
@@ -89,6 +93,7 @@ body {
     display: block;
 }
 
+/*I decide to use add a "Click here" text to the image so that the user knows that the image he is hovering over, is a website that can be visited*/
 #hover-text {
     position: absolute;
     bottom: 50%;
@@ -130,6 +135,7 @@ body {
     margin-right: 30px;
 }
 
+/*The reference image also has a horizontal line across the screen dividing the headers on the content from each other which I also use here*/
 .section-header::before {
     content: "";
     position: absolute;
@@ -151,6 +157,8 @@ body {
     text-align: center;
 }
 
+
+/*Screen adjustment for smaller screens such as phones.*/
 
 @media only screen and (max-width: 600px) {
 
@@ -203,6 +211,8 @@ body {
         display: none;
     }
 }
+
+/*Screen adjustments for larger screens typically for most tablets*/
 
 @media only screen and (min-width: 601px) and (max-width: 1024px) {
     .nav-elements {
