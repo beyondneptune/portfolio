@@ -16,4 +16,4 @@ Media queries were used in this project to make this page accessible to everyone
 
 ## Link
 
-This page was deployed using Github Pages. If you would like to visit, click here.
+This page was deployed using Github Pages. If you would like to visit, [click here](https://beyondneptune.github.io/portfolio/).
